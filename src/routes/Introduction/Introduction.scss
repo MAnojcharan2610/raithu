@@ -1,0 +1,156 @@
+.introduction-wrapper {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 2rem 0;
+
+  .introduction-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .introduction-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      
+      h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 1rem;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 3px;
+          background-color: #e67e22;
+        }
+      }
+    }
+
+    .content-sections {
+      .content-section {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        overflow: hidden; // Add this to contain floated elements
+
+        h2 {
+          color: #2c3e50;
+          margin-bottom: 1rem;
+          font-size: 1.8rem;
+        }
+
+        p {
+          color: #34495e;
+          line-height: 1.8;
+          text-align: justify;
+          font-size: 1.1rem;
+          margin-bottom: 2rem;
+          clear: both; // Clear floats
+          overflow: hidden; // Prevent text wrap around images
+        }
+
+        .image-section {
+          width: 100%;
+          max-width: 600px; // Reduced from 800px
+          margin: 3rem auto;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          background: #fff;
+          display: block; // Ensure block-level display
+          clear: both; // Clear any floats
+          
+          // Add space between consecutive images
+          & + .image-section {
+            margin-top: 3rem;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 400px; // Limit image height
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+
+          .image-caption {
+            padding: 1rem;
+            text-align: center;
+            color: #2c3e50;
+            font-style: italic;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+          }
+        }
+
+        // Remove float styles and use margin for spacing
+        .image-section:nth-of-type(odd),
+        .image-section:nth-of-type(even) {
+          float: none;
+          margin: 3rem auto;
+          width: 100%;
+          max-width: 600px;
+        }
+
+        // Clear floats after paragraphs
+        p {
+          clear: both;
+          margin-bottom: 1.5rem;
+        }
+
+        // Add clearfix to section
+        &::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .introduction-wrapper {
+    padding: 1rem;
+
+    .introduction-container {
+      padding: 1rem;
+
+      .content-section {
+        padding: 1rem;
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .image-section {
+          margin: 2rem auto;
+          
+          img {
+            max-height: 300px;
+          }
+
+          .image-caption {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

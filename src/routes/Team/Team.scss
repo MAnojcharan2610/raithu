@@ -1,0 +1,102 @@
+.team-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f8f9fa;
+  
+  .team-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2.8rem;
+      margin-bottom: 4rem;
+      position: relative;
+      font-weight: 700;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2980b9);
+        border-radius: 2px;
+      }
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+
+      .member-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        border-top: 4px solid var(--accent-color);
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .member-content {
+          padding: 2rem;
+          text-align: center;
+
+          .member-initials {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          }
+
+          h2 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+          }
+
+          .roll-no {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            font-family: monospace;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-wrapper {
+    padding: 1rem;
+
+    .team-content {
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+      }
+
+      .team-grid {
+        gap: 1.5rem;
+      }
+    }
+  }
+}

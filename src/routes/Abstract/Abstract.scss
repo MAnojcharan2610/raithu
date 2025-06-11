@@ -70,6 +70,81 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 
+.abstract-wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+
+  .abstract-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.08;
+      }
+    }
+
+    .content-container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-top: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+        position: relative;
+        font-weight: 700;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(90deg, #3498db, #2980b9);
+          border-radius: 2px;
+        }
+      }
+
+      .text-content {
+        color: #2c3e50;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: justify;
+        
+        p {
+          margin-bottom: 1.5rem;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 .highlight-box {
   background: $background-light;
   border-left: 4px solid $accent-color;
@@ -139,5 +214,26 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .abstract-wrapper {
+    padding: 1rem;
+
+    .abstract-content {
+      .content-container {
+        padding: 2rem 1.5rem;
+        margin-top: 1rem;
+
+        h1 {
+          font-size: 2.2rem;
+          margin-bottom: 2rem;
+        }
+
+        .text-content {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+      }
+    }
   }
 }

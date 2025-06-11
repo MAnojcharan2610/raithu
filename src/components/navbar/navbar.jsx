@@ -24,7 +24,6 @@ const Navbar=()=>{
                 <li onClick={()=>navigateRouter('survey-photos')} className="nav-li">Survey Photos</li>
                 <li onClick={()=>navigateRouter('conclusion')} className="nav-li">Conclusion</li>
                 <li onClick={()=>navigateRouter('team')} className="nav-li">Team</li>
-                <li className="user nav-li" onClick={()=>navigateRouter('user')}><FaCircleUser/></li>
             </ul>
         </nav>
             <Outlet/>

@@ -6,7 +6,7 @@ import Abstract from "./routes/Abstract/Abstract";
 import Introduction from "./routes/Introduction/Introduction";
 import Questionnarie  from "./routes/Questionnarie/Questionnarie";
 import SurveyPhotos from './routes/survey-photos/survey-photos';
-import SurveyData from './routes/Survey data/Survey data';
+import SurveyData from "./routes/Survey-data/Survey-data";
 
 function App() {
   const location = useLocation();
@@ -21,6 +21,7 @@ function App() {
             <Route path="/introduction" element={<Introduction/>}/>
             <Route path="/questionnaire" element={<Questionnarie/>}/>
             <Route path='/survey-photos' element={<SurveyPhotos/>}/>
+            <Route path='/survey-data' element={<SurveyData/>}/>
           </Route>
         </Routes>
       </AnimatePresence>

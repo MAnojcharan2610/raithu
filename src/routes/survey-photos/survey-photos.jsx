@@ -1,4 +1,4 @@
-import {  AnimatePresence } from 'framer-motion';
+import {  AnimatePresence,motion } from 'framer-motion';
 import { useState } from 'react';
 import BackButton from '../../components/BackButton/BackButton';
 import image6 from '../../assets/image6.jpg';

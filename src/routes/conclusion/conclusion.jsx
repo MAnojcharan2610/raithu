@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import BackButton from '../../components/BackButton/BackButton';
 import image24 from '../../assets/image24.jpg';
-import './Conclusion.scss';
+import './conclusion.scss'
 
 const Conclusion = () => {
   return (

@@ -7,7 +7,7 @@ import Introduction from "./routes/Introduction/Introduction";
 import Questionnarie  from "./routes/Questionnarie/Questionnarie";
 import SurveyPhotos from './routes/survey-photos/survey-photos';
 import SurveyData from "./routes/Survey-data/Survey-data";
-import Conclusion from "./routes/Conclusion/Conclusion";
+import Conclusion from './routes/conclusion/conclusion'
 import Team from "./routes/Team/Team";
 
 function App() {

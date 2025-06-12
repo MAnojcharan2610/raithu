@@ -5,7 +5,7 @@ const Home = () => {
   const projectTitle = {
     main: "IDENTIFICATION OF PROBLEMS FACED BY RICE MILL WORKERS",
     subtitle: "A Community Service Project Report",
-    university: "GEETHANJALI INSTITUTE OF SCIENCE AND"
+    university: "GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY"
   };
 
   const teamMembers = [

@@ -17,7 +17,7 @@ const Navbar=()=>{
                 <p></p>
             </div>
             <ul>
-                <li onClick={()=>navigateRouter('abstract')} className="nav-li">Abstarct</li>
+                <li onClick={()=>navigateRouter('abstract')} className="nav-li">Abstract</li>
                 <li onClick={()=>navigateRouter('introduction')} className="nav-li">Introduction</li>
                 <li onClick={()=>navigateRouter('questionnaire')} className="nav-li">Questionnaire</li>
                 <li onClick={()=>navigateRouter('survey-data')} className="nav-li">Survey Data</li>
